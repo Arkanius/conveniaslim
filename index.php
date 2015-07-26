@@ -24,7 +24,12 @@ function addGrupo(){
     $request = \Slim\Slim::getInstance()->request();
     $grupo = json_decode($request->getBody());
     if(!empty($grupo)){
-    	echo getGrupos($grupo->grupos, $grupo->cometas);
+    	if(sizeof($grupo->grupos) == sizeof($grupo->cometas)){
+			echo getGrupos($grupo->grupos, $grupo->cometas);
+    	}    	
+    	else {
+    		echo '{"Application error: The size of both arrays must be equal"}';
+    	}
     }
     else{
    		echo '{"Application error: The Body Can not be null"}';
