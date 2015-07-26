@@ -25,7 +25,7 @@ function addGrupo(){
     $grupo = json_decode($request->getBody());
     //$sql = "INSERT INTO produtos (nome,preco,dataInclusao,idCategoria) values (:nome,:preco,:dataInclusao,:idCategoria) ";
     //$produto->id = $conn->lastInsertId();
-    echo json_encode($grupo);
+    echo getGrupos($grupo->grupos, $grupo->cometas);
 }
 
 function getGrupos($grupos = null, $cometas = null){
