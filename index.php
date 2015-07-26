@@ -13,27 +13,38 @@ $app->get('/test', function () {
 	echo json_encode("Application Test: Working");
 });
 
+$app->post('/grupos', 'addGrupo');
+
 
 $app->run();
 
 
+function addGrupo(){
 
+    $request = \Slim\Slim::getInstance()->request();
+    $grupo = json_decode($request->getBody());
+    //$sql = "INSERT INTO produtos (nome,preco,dataInclusao,idCategoria) values (:nome,:preco,:dataInclusao,:idCategoria) ";
+    //$produto->id = $conn->lastInsertId();
+    echo json_encode($grupo);
+}
 
-function getGrupos(){
+function getGrupos($grupos = null, $cometas = null){
 
-	$cometas = array(
+	if(empty($grupos) && empty($cometas)){
+		$cometas = array(
 			'HALLEY',
 			'ENCKE',
 			'WOLF',
 			'KUSHIDA'
 		);
 
-	$grupos = array(
+		$grupos = array(
 			'AMARELO',
 			'VERMELHO',
 			'PRETO',
 			'AZUL'
 		);
+	}
 
 	$indices_nao_levados = gruposNaoLevado(calcularValores($grupos), calcularValores($cometas));
 
