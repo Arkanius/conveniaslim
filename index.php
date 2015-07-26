@@ -23,9 +23,12 @@ function addGrupo(){
 
     $request = \Slim\Slim::getInstance()->request();
     $grupo = json_decode($request->getBody());
-    //$sql = "INSERT INTO produtos (nome,preco,dataInclusao,idCategoria) values (:nome,:preco,:dataInclusao,:idCategoria) ";
-    //$produto->id = $conn->lastInsertId();
-    echo getGrupos($grupo->grupos, $grupo->cometas);
+    if(!empty($grupo)){
+    	echo getGrupos($grupo->grupos, $grupo->cometas);
+    }
+    else{
+   		echo '{"Application error: The Body Can not be null"}';
+    }
 }
 
 function getGrupos($grupos = null, $cometas = null){
