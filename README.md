@@ -9,7 +9,7 @@ Foi criado um link para teste de conexão: http://854e1fca.ngrok.io/conveniaslim
 O link padrão, http://854e1fca.ngrok.io/conveniaslim/  se acessado via GET, irá retornar o resultado do exercício proposto no email, também em JSON.<br><br>
 
 Testando a API com novos grupos e cometas<br><br>
-A API foi feita para permitir que novos grupos e cometas sejam testados, para isso deve-se utilizar a url:<br> http://854e1fca.ngrok.io/conveniaslim/grupos através do método POST e no Body da requisição, deve-se enviar os grupos e cometas em JSON no seguinte formato:<br><br>
+A API foi feita para permitir que novos grupos e cometas sejam testados, para isso deve-se utilizar a url: http://854e1fca.ngrok.io/conveniaslim/grupos através do método POST, e no Body da requisição, deve-se enviar os grupos e cometas em JSON no seguinte formato:<br><br>
 {"cometas":["HALLEY","ENCKE","WOLF","KUSHIDA"],
 "grupos":["AMARELO","VERMELHO","PRETO","AZUL"]}<br>
 
