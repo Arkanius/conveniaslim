@@ -1,8 +1,8 @@
 # conveniaslim
 
-API Teste Convenia (Exercício)
+##API Teste Convenia (Exercício)
 
-Neste documento estão listadas as maneiras de se conectar à API solicitada no exercício.
+###Neste documento estão listadas as maneiras de se conectar à API solicitada no exercício.
 
 O link para consumir a API é: http://854e1fca.ngrok.io/conveniaslim/ (link gerado via Ngrok). 
 Foi criado um link para teste de conexão: http://854e1fca.ngrok.io/conveniaslim/test que Deverá retornar a mensagem "Application Test: Working" em JSON.
