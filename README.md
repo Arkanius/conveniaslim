@@ -17,7 +17,7 @@ O retorno será feito da mesma forma que na url padrão:
 {"grupos":["VERMELHO"]}
 
 ####Observações importantes:
-Caso o Body da requisção POST seja nulo, será retornada uma mensagem de erro: {"Application error: The Body Can not be null"}
+Caso o Body da requisção POST seja nulo, será retornada uma mensagem de erro: {"Application error: The Body Can not be null"}<br>
 Caso o número de grupos e cometas não estejam dentro do padrão apresentado, será retornado uma mensagem de erro: {"Application error: The size of both arrays must be equal"}
 A API apenas retorna resultados em JSON, portanto analisar os retornos via postman.
 
